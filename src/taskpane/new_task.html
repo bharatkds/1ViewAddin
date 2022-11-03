@@ -1,0 +1,1484 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>1viewtask Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link
+      rel="stylesheet"
+      href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"> -->
+    <!-- Template styles -->
+    <!-- <link href="taskpane.css" rel="stylesheet" /> -->
+    <link href="main.css" rel="stylesheet" />
+
+    <!-- <link href="C:\Outlook1View\OutlookAddIns\src\taskpane\taskpane.css" rel="stylesheet" type="text/css" /> -->
+  </head>
+
+  <body class="ms-font-m ms-welcome ms-Fabric">
+    <script type="text/javascript" src="new_task.js"></script>
+    <section class="main_outlook_wrapper">
+      <img src="https://portal.1viewtask.com/images/1viewtask-logo-sidebar.png" alt="" />
+      <header class="company_tab">
+        <div>
+          <select id="companyselection">
+            <option>KDataScience Solutions Pvt Ltd</option>
+          </select>
+        </div>
+        <div class="tab_wrapper">
+          <div class="tab">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-mail"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span class="d-block"> Email</span>
+          </div>
+          <div class="tab active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-plus"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span class="d-block">New Task</span>
+          </div>
+        </div>
+      </header>
+      <div class="bg-white login-input-wrapper attached_email_wrapper">
+        <div class="mail_mai_btn">
+          <!-- Back Button -->
+          <!-- <button class="attach_btn">Attach to Task</button> -->
+          <!-- <p><label id="lblUSerError" style="color:rgb(181, 56, 56) " ></label></p> -->
+          <!-- <button id="back_btn">back</button> -->
+        </div>
+        <!-- <p><label id="item-error"></label></p> -->
+        <div class="subject_wrapper">
+          <div>
+            <input type="text" placeholder=" Email Subject" id="emailSubject" />
+          </div>
+          <div class="date_wrapper">
+            <label><span>Today</span> </label>
+            <button class="icon_wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+                <g id="Group_115" data="" -="" name="Group 115" transform="translate(-624.5 -305.5)">
+                  <g id="calendar" transform="translate(622.277 303.642)">
+                    <rect
+                      id="Rectangle_143"
+                      data-name="Rectangle 143"
+                      width="12"
+                      height="11"
+                      rx="2"
+                      transform="translate(2.723 3.358)"
+                      fill="none"
+                      stroke="#9b99a4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    ></rect>
+                    <line
+                      id="Line_45"
+                      data-name="Line 45"
+                      y2="2"
+                      transform="translate(11.723 2.358)"
+                      fill="none"
+                      stroke="#9b99a4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    ></line>
+                    <line
+                      id="Line_46"
+                      data-name="Line 46"
+                      y2="2"
+                      transform="translate(5.723 2.358)"
+                      fill="none"
+                      stroke="#9b99a4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    ></line>
+                    <line
+                      id="Line_47"
+                      data-name="Line 47"
+                      x2="12"
+                      transform="translate(2.723 7.358)"
+                      fill="none"
+                      stroke="#9b99a4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    ></line>
+                  </g>
+                  <path
+                    id="Polygon_1"
+                    data-name="Polygon 1"
+                    d="M1.751,0,3.5,3.5H0Z"
+                    transform="translate(633.354 312.592) rotate(93)"
+                    fill="#9b99a4"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="subject_wrapper">
+          <div>
+            <!-- Description -->
+            <input type="text" placeholder="Description" id="description" />
+          </div>
+          <div>
+            <div class="custom_dropdown priority open">
+              <button id="priority_btn">
+                <label for="Medium"><i class="medium"></i>Medium</label>
+              </button>
+              <ul id="ddlPriority">
+                <li data-val="1">
+                  <label for="Critical"><i class="critical"></i>Critical</label>
+                </li>
+                <li data-val="2">
+                  <label for="High"><i class="high"></i>High</label>
+                </li>
+                <li data-val="3" class="active">
+                  <label for="Medium"><i class="medium"></i>Medium</label>
+                </li>
+                <li data-val="4">
+                  <label for="Low"><i class="low"></i>Low</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- Assign -->
+        <label class="usertype_label">Assign</label>
+      </div>
+      <div>
+        <p><label id="lblUSerError" style="color: rgb(181, 56, 56)"></label></p>
+      </div>
+
+      <div class="preparor_wrapper">
+        <!-- <ul>
+            <li>P1</li>
+            <li>P1</li>
+            <li>P1</li>
+          </ul> -->
+        <div class="user_list_wrapper">
+          <button class="adduser-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24.38" height="20" viewBox="0 0 24.38 20">
+              <g id="user-plus" transform="translate(1 1)">
+                <path
+                  id="Path_18"
+                  data-name="Path 18"
+                  d="M16,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2"
+                  transform="translate(-1 -3)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+                <circle
+                  id="Ellipse_12"
+                  data-name="Ellipse 12"
+                  cx="4"
+                  cy="4"
+                  r="4"
+                  transform="translate(3.5)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></circle>
+                <line
+                  id="Line_14"
+                  data-name="Line 14"
+                  y2="6"
+                  transform="translate(19.38 5)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></line>
+                <line
+                  id="Line_15"
+                  data-name="Line 15"
+                  x1="6"
+                  transform="translate(16.38 8)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></line>
+              </g>
+            </svg>
+          </button>
+          <ul class="users_list" id="selectedPreparer">
+            <li
+              data-id="114"
+              data-email="bharat.aneja@kdatascience.com"
+              title="Bharat Aneja"
+              data-pic="https://qa.1viewtask.com/authapi/attachment/1664190807396.png"
+            >
+              <img src="https://qa.1viewtask.com/authapi/attachment/1664190807396.png" /><span class="remove_user"
+                ><i class="fas fa-times"></i
+              ></span>
+            </li>
+            <li
+              data-id="116"
+              data-email="Anil.Guliyaan@kdatascience.com"
+              title="Anil Guliyaan"
+              data-pic="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF"
+            >
+              <img src="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF" /><span class="remove_user"
+                ><i class="fas fa-times"></i
+              ></span>
+            </li>
+          </ul>
+          <ul class="user_list_dropdown compliance_user_list" id="PreparerDropDownList">
+            <li class="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-search"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" placeholder="search" onkeyup="filterList(this,`PreparerDropDownList`)" />
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="106"
+              title="anand.kumar@kdatascience.com"
+              data-pic=""
+              data-name="Anand Kumar"
+              data-initial="AK"
+            >
+              <div class="user_initals">AK</div>
+              <div class="user_name">Anand Kumar</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="116"
+              title="Anil.Guliyaan@kdatascience.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1657694422462.GIF"
+              data-name="Anil Guliyaan"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1657694422462.GIF" />
+              </div>
+              <div class="user_name">Anil Guliyaan</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="109"
+              title="bhanu.gusain@kdatascience.com"
+              data-pic=""
+              data-name="Bhanu Gusain"
+              data-initial="BG"
+            >
+              <div class="user_initals">BG</div>
+              <div class="user_name">Bhanu Gusain</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="114"
+              title="bharat.aneja@kdatascience.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1663836011268.jpg"
+              data-name="Bharat Aneja"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1663836011268.jpg" />
+              </div>
+              <div class="user_name">Bharat Aneja</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="115"
+              title="Deepa.jha@kdatascience.com"
+              data-pic=""
+              data-name="Deepa Jha"
+              data-initial="DJ"
+            >
+              <div class="user_initals">DJ</div>
+              <div class="user_name">Deepa Jha</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="337"
+              title="faiz@gmail.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1663576953818.jpg"
+              data-name="faiz ahmad"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1663576953818.jpg" />
+              </div>
+              <div class="user_name">faiz ahmad</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="220"
+              title="Garima.Agrawal@kdatascience.com"
+              data-pic=""
+              data-name="Garima Agrawal"
+              data-initial="GA"
+            >
+              <div class="user_initals">GA</div>
+              <div class="user_name">Garima Agrawal</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="192"
+              title="garvit.bhatia@kdatascience.com"
+              data-pic=""
+              data-name="Garvit Bhatia"
+              data-initial="GB"
+            >
+              <div class="user_initals">GB</div>
+              <div class="user_name">Garvit Bhatia</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="249"
+              title="harjeet.singh@kdatascience.com"
+              data-pic=""
+              data-name="Harjeet Singh"
+              data-initial="HS"
+            >
+              <div class="user_initals">HS</div>
+              <div class="user_name">Harjeet Singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="339"
+              title="harry.singh@kdatascience.com"
+              data-pic=""
+              data-name="harry singh"
+              data-initial="HS"
+            >
+              <div class="user_initals">HS</div>
+              <div class="user_name">harry singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="133"
+              title="accounts@kdatascience.com"
+              data-pic=""
+              data-name="Sumit Ahuja"
+              data-initial="SA"
+            >
+              <div class="user_initals">SA</div>
+              <div class="user_name">Sumit Ahuja</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="210"
+              title="Developer1@kdatascience.com"
+              data-pic=""
+              data-name="Updendra Singh"
+              data-initial="US"
+            >
+              <div class="user_initals">US</div>
+              <div class="user_name">Updendra Singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="168"
+              title="varun.kumar@1viewtask.com"
+              data-pic=""
+              data-name="Varun Kumar"
+              data-initial="VK"
+            >
+              <div class="user_initals">VK</div>
+              <div class="user_name">Varun Kumar</div>
+            </li>
+          </ul>
+          <!-- <ul class="users_list" id="selectedPreparer">
+              <li
+                data-id="114"
+                data-email="bharat.aneja@kdatascience.com"
+                title="Bharat Aneja"
+                data-pic="https://qa.1viewtask.com/authapi/attachment/1664190807396.png"
+              >
+                <img src="https://qa.1viewtask.com/authapi/attachment/1664190807396.png" /><span class="remove_user"
+                  ><i class="fas fa-times"></i
+                ></span>
+              </li>
+              <li
+                data-id="116"
+                data-email="Anil.Guliyaan@kdatascience.com"
+                title="Anil Guliyaan"
+                data-pic="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF"
+              >
+                <img src="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF" /><span class="remove_user"
+                  ><i class="fas fa-times"></i
+                ></span>
+              </li>
+            </ul> -->
+        </div>
+        <div class="user_duration_wrapper">
+          <!-- <label>Time</label> -->
+          <select class="form-select" id="preparerTaskDurationType">
+            <option value="3">Days</option>
+            <option value="2" selected="">Hours</option>
+            <option value="1">Minutes</option>
+          </select>
+          <div>
+            <input type="number" maxlength="3" class="form-control" value="1" id="preparerTaskDuration" />
+          </div>
+        </div>
+      </div>
+
+      <label class="usertype_label">Reviewer</label>
+      <div class="preparor_wrapper">
+        <!-- <ul>
+            <li>P1</li>
+            <li>P1</li>
+            <li>P1</li>
+          </ul> -->
+        <div class="user_list_wrapper">
+          <div>
+            <button class="adduser-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24.38" height="20" viewBox="0 0 24.38 20">
+                <g id="user-plus" transform="translate(1 1)">
+                  <path
+                    id="Path_18"
+                    data-name="Path 18"
+                    d="M16,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2"
+                    transform="translate(-1 -3)"
+                    fill="none"
+                    stroke="#f27039"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                  <circle
+                    id="Ellipse_12"
+                    data-name="Ellipse 12"
+                    cx="4"
+                    cy="4"
+                    r="4"
+                    transform="translate(3.5)"
+                    fill="none"
+                    stroke="#f27039"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></circle>
+                  <line
+                    id="Line_14"
+                    data-name="Line 14"
+                    y2="6"
+                    transform="translate(19.38 5)"
+                    fill="none"
+                    stroke="#f27039"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                  <line
+                    id="Line_15"
+                    data-name="Line 15"
+                    x1="6"
+                    transform="translate(16.38 8)"
+                    fill="none"
+                    stroke="#f27039"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></line>
+                </g>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="users_list" id="selectedPreparer">
+            <li
+              data-id="114"
+              data-email="bharat.aneja@kdatascience.com"
+              title="Bharat Aneja"
+              data-pic="https://qa.1viewtask.com/authapi/attachment/1664190807396.png"
+            >
+              <img src="https://qa.1viewtask.com/authapi/attachment/1664190807396.png" /><span class="remove_user"
+                ><i class="fas fa-times"></i
+              ></span>
+            </li>
+            <li
+              data-id="116"
+              data-email="Anil.Guliyaan@kdatascience.com"
+              title="Anil Guliyaan"
+              data-pic="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF"
+            >
+              <img src="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF" /><span class="remove_user"
+                ><i class="fas fa-times"></i
+              ></span>
+            </li>
+          </ul>
+          <ul class="user_list_dropdown compliance_user_list" id="PreparerDropDownList">
+            <li class="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-search"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" placeholder="search" onkeyup="filterList(this,`PreparerDropDownList`)" />
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="106"
+              title="anand.kumar@kdatascience.com"
+              data-pic=""
+              data-name="Anand Kumar"
+              data-initial="AK"
+            >
+              <div class="user_initals">AK</div>
+              <div class="user_name">Anand Kumar</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="116"
+              title="Anil.Guliyaan@kdatascience.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1657694422462.GIF"
+              data-name="Anil Guliyaan"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1657694422462.GIF" />
+              </div>
+              <div class="user_name">Anil Guliyaan</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="109"
+              title="bhanu.gusain@kdatascience.com"
+              data-pic=""
+              data-name="Bhanu Gusain"
+              data-initial="BG"
+            >
+              <div class="user_initals">BG</div>
+              <div class="user_name">Bhanu Gusain</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="114"
+              title="bharat.aneja@kdatascience.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1663836011268.jpg"
+              data-name="Bharat Aneja"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1663836011268.jpg" />
+              </div>
+              <div class="user_name">Bharat Aneja</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="115"
+              title="Deepa.jha@kdatascience.com"
+              data-pic=""
+              data-name="Deepa Jha"
+              data-initial="DJ"
+            >
+              <div class="user_initals">DJ</div>
+              <div class="user_name">Deepa Jha</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="337"
+              title="faiz@gmail.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1663576953818.jpg"
+              data-name="faiz ahmad"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1663576953818.jpg" />
+              </div>
+              <div class="user_name">faiz ahmad</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="220"
+              title="Garima.Agrawal@kdatascience.com"
+              data-pic=""
+              data-name="Garima Agrawal"
+              data-initial="GA"
+            >
+              <div class="user_initals">GA</div>
+              <div class="user_name">Garima Agrawal</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="192"
+              title="garvit.bhatia@kdatascience.com"
+              data-pic=""
+              data-name="Garvit Bhatia"
+              data-initial="GB"
+            >
+              <div class="user_initals">GB</div>
+              <div class="user_name">Garvit Bhatia</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="249"
+              title="harjeet.singh@kdatascience.com"
+              data-pic=""
+              data-name="Harjeet Singh"
+              data-initial="HS"
+            >
+              <div class="user_initals">HS</div>
+              <div class="user_name">Harjeet Singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="339"
+              title="harry.singh@kdatascience.com"
+              data-pic=""
+              data-name="harry singh"
+              data-initial="HS"
+            >
+              <div class="user_initals">HS</div>
+              <div class="user_name">harry singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="133"
+              title="accounts@kdatascience.com"
+              data-pic=""
+              data-name="Sumit Ahuja"
+              data-initial="SA"
+            >
+              <div class="user_initals">SA</div>
+              <div class="user_name">Sumit Ahuja</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="210"
+              title="Developer1@kdatascience.com"
+              data-pic=""
+              data-name="Updendra Singh"
+              data-initial="US"
+            >
+              <div class="user_initals">US</div>
+              <div class="user_name">Updendra Singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="168"
+              title="varun.kumar@1viewtask.com"
+              data-pic=""
+              data-name="Varun Kumar"
+              data-initial="VK"
+            >
+              <div class="user_initals">VK</div>
+              <div class="user_name">Varun Kumar</div>
+            </li>
+          </ul>
+        </div>
+        <div class="user_duration_wrapper">
+          <!-- <label>Time</label> -->
+          <select class="form-select" id="reviewerTaskDurationType">
+            <option value="3">Days</option>
+            <option value="2">Hours</option>
+            <option value="1" selected="">Minutes</option>
+          </select>
+          <div>
+            <input type="number" maxlength="3" class="form-control" value="15" id="reviewerTaskDuration" />
+          </div>
+        </div>
+      </div>
+
+      <label class="usertype_label">Escalation</label>
+
+      <div class="preparor_wrapper">
+        <!-- <ul>
+            <li>P1</li>
+            <li>P1</li>
+            <li>P1</li>
+          </ul> -->
+        <div class="user_list_wrapper">
+          <button class="adduser-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24.38" height="20" viewBox="0 0 24.38 20">
+              <g id="user-plus" transform="translate(1 1)">
+                <path
+                  id="Path_18"
+                  data-name="Path 18"
+                  d="M16,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2"
+                  transform="translate(-1 -3)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+                <circle
+                  id="Ellipse_12"
+                  data-name="Ellipse 12"
+                  cx="4"
+                  cy="4"
+                  r="4"
+                  transform="translate(3.5)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></circle>
+                <line
+                  id="Line_14"
+                  data-name="Line 14"
+                  y2="6"
+                  transform="translate(19.38 5)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></line>
+                <line
+                  id="Line_15"
+                  data-name="Line 15"
+                  x1="6"
+                  transform="translate(16.38 8)"
+                  fill="none"
+                  stroke="#f27039"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></line>
+              </g>
+            </svg>
+          </button>
+          <ul class="users_list" id="selectedPreparer">
+            <li
+              data-id="114"
+              data-email="bharat.aneja@kdatascience.com"
+              title="Bharat Aneja"
+              data-pic="https://qa.1viewtask.com/authapi/attachment/1664190807396.png"
+            >
+              <img src="https://qa.1viewtask.com/authapi/attachment/1664190807396.png" /><span class="remove_user"
+                ><i class="fas fa-times"></i
+              ></span>
+            </li>
+            <li
+              data-id="116"
+              data-email="Anil.Guliyaan@kdatascience.com"
+              title="Anil Guliyaan"
+              data-pic="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF"
+            >
+              <img src="https://qa.1viewtask.com/authapi/attachment/1657694422462.GIF" /><span class="remove_user"
+                ><i class="fas fa-times"></i
+              ></span>
+            </li>
+            <li>
+              <div class="user_initals">
+                HS<span class="remove_user"><i class="fas fa-times"></i></span>
+              </div>
+            </li>
+          </ul>
+          <ul class="user_list_dropdown compliance_user_list" id="PreparerDropDownList">
+            <li class="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-search"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+
+              <input type="text" placeholder="Search" onkeyup="filterList(this,`PreparerDropDownList`)" />
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="106"
+              title="anand.kumar@kdatascience.com"
+              data-pic=""
+              data-name="Anand Kumar"
+              data-initial="AK"
+            >
+              <div class="user_initals">AK</div>
+              <div class="user_name">Anand Kumar</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="116"
+              title="Anil.Guliyaan@kdatascience.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1657694422462.GIF"
+              data-name="Anil Guliyaan"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1657694422462.GIF" />
+              </div>
+              <div class="user_name">Anil Guliyaan</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="109"
+              title="bhanu.gusain@kdatascience.com"
+              data-pic=""
+              data-name="Bhanu Gusain"
+              data-initial="BG"
+            >
+              <div class="user_initals">BG</div>
+              <div class="user_name">Bhanu Gusain</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="114"
+              title="bharat.aneja@kdatascience.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1663836011268.jpg"
+              data-name="Bharat Aneja"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1663836011268.jpg" />
+              </div>
+              <div class="user_name">Bharat Aneja</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="115"
+              title="Deepa.jha@kdatascience.com"
+              data-pic=""
+              data-name="Deepa Jha"
+              data-initial="DJ"
+            >
+              <div class="user_initals">DJ</div>
+              <div class="user_name">Deepa Jha</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="337"
+              title="faiz@gmail.com"
+              data-pic="https://dev.1viewtask.com/authapi/attachment/1663576953818.jpg"
+              data-name="faiz ahmad"
+            >
+              <div class="user_initals user_intial_image">
+                <img class="user-name-img" src="https://dev.1viewtask.com/authapi/attachment/1663576953818.jpg" />
+              </div>
+              <div class="user_name">faiz ahmad</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="220"
+              title="Garima.Agrawal@kdatascience.com"
+              data-pic=""
+              data-name="Garima Agrawal"
+              data-initial="GA"
+            >
+              <div class="user_initals">GA</div>
+              <div class="user_name">Garima Agrawal</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="192"
+              title="garvit.bhatia@kdatascience.com"
+              data-pic=""
+              data-name="Garvit Bhatia"
+              data-initial="GB"
+            >
+              <div class="user_initals">GB</div>
+              <div class="user_name">Garvit Bhatia</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="249"
+              title="harjeet.singh@kdatascience.com"
+              data-pic=""
+              data-name="Harjeet Singh"
+              data-initial="HS"
+            >
+              <div class="user_initals">HS</div>
+              <div class="user_name">Harjeet Singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="339"
+              title="harry.singh@kdatascience.com"
+              data-pic=""
+              data-name="harry singh"
+              data-initial="HS"
+            >
+              <div class="user_initals">HS</div>
+              <div class="user_name">harry singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="133"
+              title="accounts@kdatascience.com"
+              data-pic=""
+              data-name="Sumit Ahuja"
+              data-initial="SA"
+            >
+              <div class="user_initals">SA</div>
+              <div class="user_name">Sumit Ahuja</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="210"
+              title="Developer1@kdatascience.com"
+              data-pic=""
+              data-name="Updendra Singh"
+              data-initial="US"
+            >
+              <div class="user_initals">US</div>
+              <div class="user_name">Updendra Singh</div>
+            </li>
+            <li
+              class="dropdown-user"
+              data-id="168"
+              title="varun.kumar@1viewtask.com"
+              data-pic=""
+              data-name="Varun Kumar"
+              data-initial="VK"
+            >
+              <div class="user_initals">VK</div>
+              <div class="user_name">Varun Kumar</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="Make-Recurring" class="quick-recurring">
+        <div class="mycard_header justify-content-between">
+          <div class="d-flex scheduer-start-time align-items-center ml-auto mb-1">
+            <span class="text-12"> Start Time</span>
+            <label class="ml-2">HH</label>
+            <select placeholder="HH" id="StartHour">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+            <label>MM</label>
+            <select placeholder="MM" id="StartMinute">
+              <option value="00">00</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+              <option>32</option>
+              <option>33</option>
+              <option>34</option>
+              <option>35</option>
+              <option>36</option>
+              <option>37</option>
+              <option>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+              <option>43</option>
+              <option>44</option>
+              <option>45</option>
+              <option>46</option>
+              <option>47</option>
+              <option>48</option>
+              <option>49</option>
+              <option>50</option>
+              <option>51</option>
+              <option>52</option>
+              <option>53</option>
+              <option>54</option>
+              <option>55</option>
+              <option>56</option>
+              <option>57</option>
+              <option>58</option>
+              <option>59</option>
+            </select>
+
+            <select id="StartAMPM">
+              <option>AM</option>
+              <option>PM</option>
+            </select>
+          </div>
+          <h2 class="mt-1">Recurrence pattern</h2>
+        </div>
+        <div class="mycard_body">
+          <form id="registerForm" class="recurring_form needs-validation" novalidate="">
+            <div class="pattern-wrp">
+              <div class="pattern-left">
+                <button class="Pattern_btn_1 pattern_btn active-btn" id="RbtFrequency_1" value="1 - O" type="button">
+                  <span class="radio"><b></b></span>
+                  <span class="pattern-text text-capitalize">One time</span>
+                </button>
+                <button class="Pattern_btn_10 pattern_btn" id="RbtFrequency_10" value="10 - D" type="button">
+                  <span class="radio"><b></b></span>
+                  <span class="pattern-text text-capitalize">Daily</span>
+                </button>
+                <button class="Pattern_btn_2 pattern_btn" id="RbtFrequency_2" value="2 - W" type="button">
+                  <span class="radio"><b></b></span>
+                  <span class="pattern-text text-capitalize">weekly</span>
+                </button>
+                <button class="Pattern_btn_3 pattern_btn" id="RbtFrequency_3" value="3 - M" type="button">
+                  <span class="radio"><b></b></span>
+                  <span class="pattern-text text-capitalize">Monthly</span>
+                </button>
+
+                <button class="Pattern_btn_9 pattern_btn" id="RbtFrequency_9" value="9 - Y" type="button">
+                  <span class="radio"><b></b></span>
+
+                  <span class="pattern-text text-capitalize">Yearly</span>
+                </button>
+
+                <button class="Pattern_btn_11 pattern_btn" id="RbtFrequency_11" value="11 - Mi" type="button">
+                  <span class="radio"><b></b></span>
+
+                  <span class="pattern-text text-capitalize">Hourly</span>
+                </button>
+              </div>
+              <div class="pattern-right">
+                <div class="pattern-cotent1 pattern-cmn01" id="D">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <input type="radio" checked="" name="checkbox1" id="EveryDaily" />
+                      <label for="#">Every</label>
+                    </div>
+                    <div class="Ptrn-item2 Ptrn-item-cmn">
+                      <input
+                        type="number"
+                        name="input1"
+                        id="txtDaily"
+                        value="1"
+                        min="1"
+                        max="31"
+                        oninput="this.value = Math.abs(this.value)"
+                      />
+
+                      <label for="#">Day(s)</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent2 pattern-cmn01" id="W" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <input type="radio" name="checkbox1" id="checkbox1" />
+                      <label for="#">Recur every</label>
+                    </div>
+                    <div class="Ptrn-item2 Ptrn-item-cmn">
+                      <input
+                        type="number"
+                        name="input1"
+                        id="WweekRecure"
+                        value="1"
+                        min="1"
+                        max="99"
+                        oninput="this.value = Math.abs(this.value); if ((this.value) > 99) {this.value = 99}"
+                      />
+                      <label for="#">week(s) on:</label>
+                    </div>
+                  </div>
+                  <div class="repeatedon mb-3">
+                    <label class="form-label">Repeated On</label>
+                    <ul class="weeklabel"></ul>
+                  </div>
+                </div>
+                <div class="pattern-cotent3 pattern-cmn01" id="M" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <input type="radio" name="checkbox1" checked="" id="Day" />
+                      <label for="#">Day</label>
+                    </div>
+                    <div class="Ptrn-item2 Ptrn-item-cmn">
+                      <input
+                        type="number"
+                        name="input1"
+                        id="txtofEvery"
+                        value="4"
+                        min="1"
+                        max="31"
+                        oninput="this.value = Math.abs(this.value)"
+                      />
+                      <label for="#">of Every</label>
+                    </div>
+                    <div class="Ptrn-item2 Ptrn-item-cmn">
+                      <input
+                        type="number"
+                        name="input1"
+                        id="txtmonth"
+                        value="1"
+                        min="1"
+                        max="12"
+                        oninput="this.value = Math.abs(this.value)"
+                      />
+                      <label for="#">month(s)</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent4 pattern-cmn01" id="BW" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <div class="Bi_Weekly-wrapper">
+                        <ul class="Bi-weekly-Left">
+                          <li class="Bi-wekly1">
+                            <label for="">Every </label>
+                            <select name="bi-weekly" id="BWEvery_Week"></select>
+                            <label for=""> Weeks</label>
+                          </li>
+                        </ul>
+                        <ul class="Bi-weekly-Right">
+                          <label for="">On Day :</label>
+                          <select name="bi-weekly" id="ddlWeeks">
+                            <option value="0">Select Day</option>
+                          </select>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent5 pattern-cmn01" id="SM" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <label for="#">Semi Monthly</label>
+                      <div class="Bi_Weekly-wrapper">
+                        <ul class="Bi-weekly-Left">
+                          <li class="Bi-wekly1">
+                            <label for="">Day1</label>
+                            <select name="bi-weekly" id="SMDay1">
+                              <option value="0">Date</option>
+                            </select>
+                          </li>
+                        </ul>
+                        <ul class="Bi-weekly-Right">
+                          <li class="Bi-wekly1">
+                            <label for="">Day2</label>
+                            <select name="bi-weekly" id="SMDay2">
+                              <option value="0">Date</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent6 pattern-cmn01" id="BM" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <div class="Bi_Weekly-wrapper">
+                        <ul class="Bi-weekly-Left">
+                          <li class="Bi-wekly1">
+                            <label for="">Every </label>
+                            <select name="bi-weekly" id="BMEvery_Month1"></select>
+                            <label for=""> Months</label>
+                          </li>
+                        </ul>
+                        <ul class="Bi-weekly-Right">
+                          <li class="Bi-wekly1">
+                            <label for="">On Date </label>
+                            <select name="bi-weekly" id="BMonDate">
+                              <option value="0">Select Date</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent7 pattern-cmn01" id="Q" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <div class="Bi_Weekly-wrapper">
+                        <ul class="Bi-weekly-Left">
+                          <li class="Bi-wekly1">
+                            <label for="">Every </label>
+                            <select name="bi-weekly" id="QEvery_Month1"></select>
+                            <label for=""> Months</label>
+                          </li>
+                        </ul>
+                        <ul class="Bi-weekly-Right">
+                          <label for="">On Date :</label>
+                          <select name="bi-weekly" id="QonDate">
+                            <option value="0">Select Date</option>
+                          </select>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent8 pattern-cmn01" id="HY" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <div class="Bi_Weekly-wrapper">
+                        <ul class="Bi-weekly-Left">
+                          <li class="Bi-wekly1">
+                            <label for="">Starting from :</label>
+                            <input type="date" name="half-year" id="HYweekdate" />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent9 pattern-cmn01" id="Y" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <input type="radio" name="checkbox1" id="checkbox1" /> <label for="#">Recur every</label>
+                    </div>
+                    <div class="Ptrn-item2 Ptrn-item-cmn">
+                      <input type="text" name="input1" id="YRecur" value="1" /> <label for="#">year(s)</label>
+                    </div>
+                  </div>
+                  <div class="Ptrn-item3 Ptrn-item-cmn week-wrp">
+                    <div class="every-wrp2">
+                      <div class="Ptrn-item1 Ptrn-item-cmn">
+                        <input type="radio" name="checkbox1" checked="" id="checkbox1" /> <label for="#"> On:</label>
+                      </div>
+                      <div class="Ptrn-item2 Ptrn-item-cmn"></div>
+                      <div class="Ptrn-item2 Ptrn-item-cmn">
+                        <select name="input1" id="YDay">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                          <option>13</option>
+                          <option>14</option>
+                          <option>15</option>
+                          <option>16</option>
+                          <option>17</option>
+                          <option>18</option>
+                          <option>19</option>
+                          <option>20</option>
+                          <option>21</option>
+                          <option>22</option>
+                          <option>23</option>
+                          <option>24</option>
+                          <option>25</option>
+                          <option>26</option>
+                          <option>27</option>
+                          <option>28</option>
+                          <option>29</option>
+                          <option>30</option>
+                          <option>31</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent10 pattern-cmn01" id="O" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <div class="Bi_Weekly-wrapper">
+                        <ul class="Bi-weekly-Left">
+                          <li class="Bi-wekly1">
+                            <span class="text-danger">*</span><label for="">Start Date :</label>
+                            <input type="date" name="half-year" id="OonTime" />
+                          </li>
+                          <li class="Bi-wekly1">
+                            <label for="">Due date :</label>
+                            <input type="datetime-local" name="duedate_onetime" id="DueOonTime" disabled="" />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pattern-cotent11 pattern-cmn01" id="Mi" style="display: none">
+                  <div class="every-wrp">
+                    <div class="Ptrn-item1 Ptrn-item-cmn">
+                      <input type="radio" checked="" name="checkbox11" id="#Every" /> <label for="#">Every</label>
+                    </div>
+                    <div class="Ptrn-item2 Ptrn-item-cmn">
+                      <input
+                        type="number"
+                        name="input11"
+                        id="txtMinute"
+                        value="1"
+                        min="1"
+                        max="1439"
+                        oninput="this.value = Math.abs(this.value)"
+                      />
+                      <label for="#">Hours(s)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pattern-botder" id="RecurDiv">
+              <div class="row">
+                <div class="col-sm-4 mb-3 range-item1 range-item-cmn">
+                  <span class="text-danger">*</span><label for="SstartDate" class="form-label">Start Date</label>
+                  <input type="date" name="datelocal" id="SstartDate" class="form-control" />
+                </div>
+                <div class="endson col-sm-8">
+                  <span class="text-danger">*</span><label class="form-label">Ends On</label>
+                  <div class="mb-2 c_radio">
+                    <input type="radio" name="Sradio" id="SrdbNoEndDate" /> <label for="SrdbNoEndDate">Never</label>
+                    <span id="SrdbNoEndDate_Label"></span>
+                  </div>
+                  <div class="mb-2 c_radio">
+                    <input type="radio" name="Sradio" id="SrdbEndDate" checked="" />
+                    <label for="SrdbEndDate"> On</label>
+                    <input type="date" name="date" id="S_EndDate" class="form-control enddate" />
+                  </div>
+                  <div class="mb-2 c_radio">
+                    <input type="radio" name="Sradio" id="SrdbEndAfter" /> <label for="SrdbEndAfter">After</label>
+                    <input
+                      type="number"
+                      name="end-after"
+                      id="S_EndAfter"
+                      value="10"
+                      min="1"
+                      max="100"
+                      oninput="this.value = Math.abs(this.value)"
+                      class="form-control endafter"
+                    />
+                    <span>occurrences</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- test -->
+      <div class="client_wrapper">
+        <label for="ddlClientLocation">Client/Location</label>
+        <select id="ddlClientLocation" title="ddlClientLocation"></select>
+      </div>
+
+      <div class="client_wrapper">
+        <label for="ddlActivitysSearch">Activity-SubActivity</label>
+        <select id="ddlActivitysSearch" title="ddlActivitysSearch">
+          <option selected="" value="Others-Others"></option>
+        </select>
+      </div>
+      <div class="mail_mai_btn">
+        <!-- <button class="attach_btn">Attach to Task</button> -->
+        <button role="button" class="newtask_btn" id="newtask_btn">Create New Task</button>
+      </div>
+
+      <!-- <div class="attachment_list_wrapper"> -->
+      <!-- <label for="attachments">Attachment</label>
+          <input type="file" name="attachments" id="attachments"> -->
+      <!-- <button id="attachments">attach_btn</button>
+          <label for="attach"></label>
+          <input type="text" name="attach" id="attach" aria-multiselectable="true" accept="">-->
+      <!-- <div class="d-flex">
+            <div class="mr-4 mt-2">
+              
+                <div>
+                  <input type="text" class="form-control" id="ComplianceFileName" placeholder="Name">
+                </div> -->
+
+      <!-- </div>
+            <div class="mr-4 mt-auto">
+
+
+                <input type="file" class="form-control" id="=ComplianceFileAttach" placeholder="Choose File">
+            </div>
+            
+            <button type="button" class="btn text-white text-center btn-add mt-auto  bg-orange task-add-btn" id="file_AttachBtn" title="Add">Add</button>
+            <div class="modal-item10 item-cmn Dark_btn_Wrp">
+            </div>
+
+      </div>
+    </div> -->
+      <!-- <p class="text-right register_para">Don't have an account? <a href="#">Register</a></p> -->
+      <div>
+        <button id="logout" type="button">Logout</button>
+      </div>
+    </section>
+  </body>
+</html>

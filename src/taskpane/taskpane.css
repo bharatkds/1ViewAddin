@@ -1,0 +1,2413 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ms-welcome__header {
+  padding: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ms-welcome__main {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
+  padding: 10px 20px;
+}
+
+.ms-welcome__main > h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.ms-welcome__features {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.ms-welcome__features.ms-List .ms-ListItem {
+  padding-bottom: 20px;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.ms-welcome__features.ms-List .ms-ListItem > .ms-Icon {
+  margin-right: 10px;
+}
+
+.ms-welcome__action.ms-Button--hero {
+  margin-top: 30px;
+}
+
+.ms-Button.ms-Button--hero .ms-Button-label {
+  color: #0078d7;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label {
+  color: #005a9e;
+  cursor: pointer;
+}
+
+b {
+  font-weight: bold;
+}
+
+/* custom css bharat */
+body {
+  background: #f0f0f0;
+}
+
+.main_outlook_wrapper {
+  width: 300px;
+  margin: auto;
+}
+
+.main_outlook_wrapper img {
+  display: block;
+  margin: 15px auto;
+}
+
+.login-input-wrapper {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* only for login input */
+/* .login-input-wrapper input {
+   background: #e5e5e5;
+   border-radius: 5px;
+   border: none;
+   width: 200px;
+   margin: 10px auto;
+   display: block;
+   padding: 10px 15px;
+ }
+ 
+ */
+
+/* only for login input */
+.login-input-wrapper.attached_email_wrapper {
+  border-radius: 0;
+}
+
+.login-input-wrapper button {
+  background: linear-gradient(36deg, #f9af1c 0%, #f27039 100%);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  width: 230px;
+  margin: 10px auto;
+  display: block;
+  padding: 10px 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.register_para {
+  font-size: 12px;
+}
+
+.register_para a {
+  font-weight: 600;
+  color: #000;
+  padding-right: 5px;
+}
+
+/* custom css bharat  end*/
+
+/* custom css attached email start */
+* {
+  border-color: rgba(112, 112, 112, 0.34);
+}
+
+.company_tab {
+  background: transparent linear-gradient(180deg, #f27039 0%, #f9af1c 100%) 0% 0% no-repeat padding-box;
+  padding: 0px 0px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.company_tab select {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: 100%;
+  margin: 10px auto;
+  font-size: 11px;
+  padding: 2px;
+}
+
+.tab_wrapper {
+  display: grid;
+  -ms-grid-columns: 60px 70px;
+  grid-template-columns: 60px 70px;
+  align-items: center;
+}
+
+.tab_wrapper .tab {
+  text-align: center;
+  padding: 5px 5px 0px;
+  font-size: 10px;
+}
+
+.tab_wrapper .tab:first-child {
+  border-right: 1px solid #fff;
+}
+
+.tab_wrapper .tab.active {
+  color: #fff;
+  border-bottom: 3px solid #ff6c38;
+}
+
+.attachment_list_wrapper {
+  border: 1px solid rgba(112, 112, 112, 0.34);
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+
+.attachment_list_wrapper p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.attachment_list_wrapper ul li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+#emailSubject {
+  border-radius: 10px;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.mail_mai_btn {
+  display: grid;
+  grid-template-columns: 48.5% 48.5%;
+  grid-column-gap: 3%;
+}
+
+.mail_mai_btn button {
+  width: 97.5%;
+}
+
+.mail_mai_btn .newtask_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-left: 70px;
+  padding: 10px 10px;
+  background: transparent linear-gradient(172deg, #ff6732 0%, #ffa17b 100%) 0% 0% no-repeat padding-box;
+}
+
+.mail_mai_btn .attach_btn {
+  border: 1px solid rgba(112, 112, 112, 0.34);
+  padding: 5px 10px;
+  background: none;
+  color: #707070;
+}
+
+.subject_wrapper {
+  display: grid;
+  grid-template-columns: 60% auto;
+  align-items: center;
+}
+
+.subject_wrapper input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #707070;
+  text-align: left;
+  border-radius: 0px;
+  margin-left: 0;
+  padding: 10px 5px;
+  width: calc(100% - 10px);
+  outline: none;
+}
+
+ul.users_list {
+  display: flex;
+  padding-left: 0px;
+}
+
+ul.users_list li {
+  position: relative;
+  list-style: none;
+}
+
+ul.users_list li:not(:first-child) {
+  margin-left: -20px;
+}
+
+ul.users_list li:not(:first-child) img {
+  border: 1px solid #707070;
+}
+
+ul.users_list li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.preparor_wrapper {
+  display: grid;
+  grid-template-columns: 120px auto auto;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.preparor_wrapper select {
+  border-radius: 3px;
+}
+
+.preparor_wrapper input {
+  background: none;
+  border: 1px solid rgba(112, 112, 112, 0.34);
+  width: auto;
+}
+
+.user_duration_wrapper {
+  display: grid;
+  grid-template-columns: 72px auto;
+  grid-gap: 5px;
+}
+
+.user_duration_wrapper input {
+  padding: 2px 3px;
+  margin: 0 0;
+  max-width: calc(100% - 10px);
+  width: 100%;
+}
+
+.client_wrapper select {
+  padding: 3px 2.25rem 3px 0.75rem;
+  background: #ffffff;
+  height: auto;
+  border: 1px solid #ced4da;
+  box-shadow: 0 0 0;
+  border-radius: 5px;
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+}
+
+.usertype_label {
+  font-size: 12px;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.34);
+  width: 100%;
+  display: block;
+  padding-bottom: 3px;
+}
+
+.preparor_wrapper .adduser-btn {
+  background: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+  border: 1px solid #e4e2da;
+  padding: 5px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+.users_list .user_initals {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ff5555;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.date_wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  grid-gap: 5px;
+}
+
+/* custom css attached email end*/
+
+/* commmonly used classes */
+.d-block {
+  display: block;
+}
+
+/* commmonly used classes */
+
+/* css for scheduler */
+
+/* css for scheduler */
+
+/*!
+  * jquery-confirm v3.3.2 (http://craftpip.github.io/jquery-confirm/)
+  * Author: boniface pereira
+  * Website: www.craftpip.com
+  * Contact: hey@craftpip.com
+  *
+ 
+  
+  * Copyright 2013-2017 jquery-confirm
+  * Licensed under MIT (https://github.com/craftpip/jquery-confirm/blob/master/LICENSE)
+  */
+@-webkit-keyframes jconfirm-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes jconfirm-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+body[class*="jconfirm-no-scroll-"] {
+  overflow: hidden !important;
+}
+
+.jconfirm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999999;
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.jconfirm .jconfirm-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.jconfirm .jconfirm-bg.jconfirm-bg-h {
+  opacity: 0 !important;
+}
+
+.jconfirm .jconfirm-scrollpane {
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  -webkit-perspective-origin: center;
+  perspective-origin: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.jconfirm .jconfirm-row {
+  display: table-row;
+  width: 100%;
+}
+
+.jconfirm .jconfirm-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.jconfirm .jconfirm-holder {
+  max-height: 100%;
+  padding: 50px 0;
+}
+
+.jconfirm .jconfirm-box-container {
+  -webkit-transition: -webkit-transform;
+  transition: -webkit-transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
+}
+
+.jconfirm .jconfirm-box-container.jconfirm-no-transition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.jconfirm .jconfirm-box {
+  background: white;
+  border-radius: 4px;
+  position: relative;
+  outline: 0;
+  padding: 15px 15px 0;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@-webkit-keyframes type-blue {
+  1%,
+  100% {
+    border-color: #3498db;
+  }
+
+  50% {
+    border-color: #5faee3;
+  }
+}
+
+@keyframes type-blue {
+  1%,
+  100% {
+    border-color: #3498db;
+  }
+
+  50% {
+    border-color: #5faee3;
+  }
+}
+
+@-webkit-keyframes type-green {
+  1%,
+  100% {
+    border-color: #2ecc71;
+  }
+
+  50% {
+    border-color: #54d98c;
+  }
+}
+
+@keyframes type-green {
+  1%,
+  100% {
+    border-color: #2ecc71;
+  }
+
+  50% {
+    border-color: #54d98c;
+  }
+}
+
+@-webkit-keyframes type-red {
+  1%,
+  100% {
+    border-color: #e74c3c;
+  }
+
+  50% {
+    border-color: #ed7669;
+  }
+}
+
+@keyframes type-red {
+  1%,
+  100% {
+    border-color: #e74c3c;
+  }
+
+  50% {
+    border-color: #ed7669;
+  }
+}
+
+@-webkit-keyframes type-orange {
+  1%,
+  100% {
+    border-color: #f1c40f;
+  }
+
+  50% {
+    border-color: #f4d03f;
+  }
+}
+
+@keyframes type-orange {
+  1%,
+  100% {
+    border-color: #f1c40f;
+  }
+
+  50% {
+    border-color: #f4d03f;
+  }
+}
+
+@-webkit-keyframes type-purple {
+  1%,
+  100% {
+    border-color: #9b59b6;
+  }
+
+  50% {
+    border-color: #b07cc6;
+  }
+}
+
+@keyframes type-purple {
+  1%,
+  100% {
+    border-color: #9b59b6;
+  }
+
+  50% {
+    border-color: #b07cc6;
+  }
+}
+
+@-webkit-keyframes type-dark {
+  1%,
+  100% {
+    border-color: #34495e;
+  }
+
+  50% {
+    border-color: #46627f;
+  }
+}
+
+@keyframes type-dark {
+  1%,
+  100% {
+    border-color: #34495e;
+  }
+
+  50% {
+    border-color: #46627f;
+  }
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-blue {
+  border-top: solid 7px #3498db;
+  -webkit-animation-name: type-blue;
+  animation-name: type-blue;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-green {
+  border-top: solid 7px #2ecc71;
+  -webkit-animation-name: type-green;
+  animation-name: type-green;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-red {
+  border-top: solid 7px #e74c3c;
+  -webkit-animation-name: type-red;
+  animation-name: type-red;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-orange {
+  border-top: solid 7px #f1c40f;
+  -webkit-animation-name: type-orange;
+  animation-name: type-orange;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-purple {
+  border-top: solid 7px #9b59b6;
+  -webkit-animation-name: type-purple;
+  animation-name: type-purple;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-dark {
+  border-top: solid 7px #34495e;
+  -webkit-animation-name: type-dark;
+  animation-name: type-dark;
+}
+
+.jconfirm .jconfirm-box.loading {
+  height: 120px;
+}
+
+.jconfirm .jconfirm-box.loading:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background: white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.jconfirm .jconfirm-box.loading:after {
+  opacity: 0.6;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border: solid 3px transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  border-radius: 50%;
+  -webkit-animation: jconfirm-spin 1s infinite linear;
+  animation: jconfirm-spin 1s infinite linear;
+  border-bottom-color: dodgerblue;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 2;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 27px !important;
+  line-height: 14px !important;
+  display: none;
+  z-index: 1;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon:empty {
+  display: none;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon .fa {
+  font-size: 16px;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon .glyphicon {
+  font-size: 16px;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon .zmdi {
+  font-size: 16px;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon:hover {
+  opacity: 1;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c {
+  display: block;
+  font-size: 22px;
+  line-height: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  padding-bottom: 15px;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c.jconfirm-hand {
+  cursor: move;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c {
+  font-size: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c i {
+  vertical-align: middle;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c:empty {
+  display: none;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: inherit;
+  font-family: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-title-c .jconfirm-title:empty {
+  display: none;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane {
+  margin-bottom: 15px;
+  height: auto;
+  -webkit-transition: height 0.4s ease-in;
+  transition: height 0.4s ease-in;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane.no-scroll {
+  overflow-y: hidden;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane::-webkit-scrollbar {
+  width: 3px;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 3px;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content {
+  overflow: auto;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane .jconfirm-content:empty {
+  display: none;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons {
+  padding-bottom: 11px;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons > button {
+  margin-bottom: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 4px;
+  min-height: 1em;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease,
+    -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease,
+    -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease,
+    -webkit-box-shadow 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+  border: 0;
+  background-image: none;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-blue {
+  background-color: #3498db;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-blue:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-green {
+  background-color: #2ecc71;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-green:hover {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-red {
+  background-color: #e74c3c;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-red:hover {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-orange {
+  background-color: #f1c40f;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-orange:hover {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-default {
+  background-color: #ecf0f1;
+  color: #000;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-default:hover {
+  background-color: #bdc3c7;
+  color: #000;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-purple {
+  background-color: #9b59b6;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-purple:hover {
+  background-color: #8e44ad;
+  color: #fff;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-dark {
+  background-color: #34495e;
+  color: #fff;
+  text-shadow: none;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons button.btn-dark:hover {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-red .jconfirm-title-c .jconfirm-icon-c {
+  color: #e74c3c !important;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-blue .jconfirm-title-c .jconfirm-icon-c {
+  color: #3498db !important;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-green .jconfirm-title-c .jconfirm-icon-c {
+  color: #2ecc71 !important;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-purple .jconfirm-title-c .jconfirm-icon-c {
+  color: #9b59b6 !important;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-orange .jconfirm-title-c .jconfirm-icon-c {
+  color: #f1c40f !important;
+}
+
+.jconfirm .jconfirm-box.jconfirm-type-dark .jconfirm-title-c .jconfirm-icon-c {
+  color: #34495e !important;
+}
+
+.jconfirm .jconfirm-clear {
+  clear: both;
+}
+
+.jconfirm.jconfirm-rtl {
+  direction: rtl;
+}
+
+.jconfirm.jconfirm-rtl div.jconfirm-closeIcon {
+  left: 5px;
+  right: auto;
+}
+
+.jconfirm.jconfirm-white .jconfirm-bg,
+.jconfirm.jconfirm-light .jconfirm-bg {
+  background-color: #444;
+  opacity: 0.2;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box,
+.jconfirm.jconfirm-light .jconfirm-box {
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-title-c .jconfirm-icon-c,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons {
+  float: right;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button.btn-default,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button.btn-default {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #333;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button.btn-default:hover,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button.btn-default:hover {
+  background: #ddd;
+}
+
+.jconfirm.jconfirm-white.jconfirm-rtl .jconfirm-title-c .jconfirm-icon-c,
+.jconfirm.jconfirm-light.jconfirm-rtl .jconfirm-title-c .jconfirm-icon-c {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.jconfirm.jconfirm-black .jconfirm-bg,
+.jconfirm.jconfirm-dark .jconfirm-bg {
+  background-color: darkslategray;
+  opacity: 0.4;
+}
+
+.jconfirm.jconfirm-black .jconfirm-box,
+.jconfirm.jconfirm-dark .jconfirm-box {
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: #444;
+  border-radius: 5px;
+  color: white;
+}
+
+.jconfirm.jconfirm-black .jconfirm-box .jconfirm-title-c .jconfirm-icon-c,
+.jconfirm.jconfirm-dark .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.jconfirm.jconfirm-black .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-dark .jconfirm-box .jconfirm-buttons {
+  float: right;
+}
+
+.jconfirm.jconfirm-black .jconfirm-box .jconfirm-buttons button,
+.jconfirm.jconfirm-dark .jconfirm-box .jconfirm-buttons button {
+  border: 0;
+  background-image: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: none;
+  /* -webkit-transition: background 0.1s; */
+  /* transition: background 0.1s; */
+  color: white;
+}
+
+.jconfirm.jconfirm-black .jconfirm-box .jconfirm-buttons button.btn-default,
+.jconfirm.jconfirm-dark .jconfirm-box .jconfirm-buttons button.btn-default {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  background: 0;
+}
+
+.jconfirm.jconfirm-black .jconfirm-box .jconfirm-buttons button.btn-default:hover,
+.jconfirm.jconfirm-dark .jconfirm-box .jconfirm-buttons button.btn-default:hover {
+  background: #666;
+}
+
+.jconfirm.jconfirm-black.jconfirm-rtl .jconfirm-title-c .jconfirm-icon-c,
+.jconfirm.jconfirm-dark.jconfirm-rtl .jconfirm-title-c .jconfirm-icon-c {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.jconfirm .jconfirm-box.hilight.jconfirm-hilight-shake {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.jconfirm .jconfirm-box.hilight.jconfirm-hilight-glow {
+  -webkit-animation: glow 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: glow 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-8px, 0, 0);
+    transform: translate3d(-8px, 0, 0);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: translate3d(8px, 0, 0);
+    transform: translate3d(8px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%,
+  80% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-8px, 0, 0);
+    transform: translate3d(-8px, 0, 0);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: translate3d(8px, 0, 0);
+    transform: translate3d(8px, 0, 0);
+  }
+}
+
+@-webkit-keyframes glow {
+  0%,
+  100% {
+    -webkit-box-shadow: 0 0 0 red;
+    box-shadow: 0 0 0 red;
+  }
+
+  50% {
+    -webkit-box-shadow: 0 0 30px red;
+    box-shadow: 0 0 30px red;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    -webkit-box-shadow: 0 0 0 red;
+    box-shadow: 0 0 0 red;
+  }
+
+  50% {
+    -webkit-box-shadow: 0 0 30px red;
+    box-shadow: 0 0 30px red;
+  }
+}
+
+.jconfirm {
+  -webkit-perspective: 400px;
+  perspective: 400px;
+}
+
+.jconfirm .jconfirm-box {
+  opacity: 1;
+  -webkit-transition-property: all;
+  transition-property: all;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-top,
+.jconfirm .jconfirm-box.jconfirm-animation-left,
+.jconfirm .jconfirm-box.jconfirm-animation-right,
+.jconfirm .jconfirm-box.jconfirm-animation-bottom,
+.jconfirm .jconfirm-box.jconfirm-animation-opacity,
+.jconfirm .jconfirm-box.jconfirm-animation-zoom,
+.jconfirm .jconfirm-box.jconfirm-animation-scale,
+.jconfirm .jconfirm-box.jconfirm-animation-none,
+.jconfirm .jconfirm-box.jconfirm-animation-rotate,
+.jconfirm .jconfirm-box.jconfirm-animation-rotatex,
+.jconfirm .jconfirm-box.jconfirm-animation-rotatey,
+.jconfirm .jconfirm-box.jconfirm-animation-scaley,
+.jconfirm .jconfirm-box.jconfirm-animation-scalex {
+  opacity: 0;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-rotate {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-rotatex {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-rotatexr {
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-rotatey {
+  -webkit-transform: rotatey(90deg);
+  transform: rotatey(90deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-rotateyr {
+  -webkit-transform: rotatey(-90deg);
+  transform: rotatey(-90deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-scaley {
+  -webkit-transform: scaley(1.5);
+  transform: scaley(1.5);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-scalex {
+  -webkit-transform: scalex(1.5);
+  transform: scalex(1.5);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-top {
+  -webkit-transform: translate(0px, -100px);
+  transform: translate(0px, -100px);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-left {
+  -webkit-transform: translate(-100px, 0px);
+  transform: translate(-100px, 0px);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-right {
+  -webkit-transform: translate(100px, 0px);
+  transform: translate(100px, 0px);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-bottom {
+  -webkit-transform: translate(0px, 100px);
+  transform: translate(0px, 100px);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-zoom {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-scale {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.jconfirm .jconfirm-box.jconfirm-animation-none {
+  visibility: hidden;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-bg {
+  background-color: rgba(54, 70, 93, 0.95);
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box {
+  background-color: transparent;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box.jconfirm-type-blue {
+  border: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box.jconfirm-type-green {
+  border: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box.jconfirm-type-red {
+  border: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box.jconfirm-type-orange {
+  border: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box.jconfirm-type-purple {
+  border: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box.jconfirm-type-dark {
+  border: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-closeIcon {
+  color: white;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-title-c {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-title-c > * {
+  padding-bottom: 25px;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-content-pane {
+  margin-bottom: 25px;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box div.jconfirm-content {
+  text-align: center;
+  color: white;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box .jconfirm-buttons {
+  text-align: center;
+}
+
+.jconfirm.jconfirm-supervan .jconfirm-box .jconfirm-buttons button {
+  font-size: 16px;
+  border-radius: 2px;
+  background: #303f53;
+  text-shadow: none;
+  border: 0;
+  color: white;
+  padding: 10px;
+  min-width: 100px;
+}
+
+.jconfirm.jconfirm-supervan.jconfirm-rtl .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.jconfirm.jconfirm-material .jconfirm-bg {
+  background-color: rgba(0, 0, 0, 0.67);
+}
+
+.jconfirm.jconfirm-material .jconfirm-box {
+  background-color: white;
+  -webkit-box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14),
+    0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  padding: 30px 25px 10px 25px;
+}
+
+.jconfirm.jconfirm-material .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.jconfirm.jconfirm-material .jconfirm-box div.jconfirm-closeIcon {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.jconfirm.jconfirm-material .jconfirm-box div.jconfirm-title-c {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.jconfirm.jconfirm-material .jconfirm-box div.jconfirm-content {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.jconfirm.jconfirm-material .jconfirm-box .jconfirm-buttons {
+  text-align: right;
+}
+
+.jconfirm.jconfirm-material .jconfirm-box .jconfirm-buttons button {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.jconfirm.jconfirm-material.jconfirm-rtl .jconfirm-title-c .jconfirm-icon-c {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-bg {
+  background-color: rgba(0, 0, 0, 0.21);
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box {
+  background-color: white;
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px rgba(0, 0, 0, 0.4);
+  padding: 15px 0 0;
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box div.jconfirm-closeIcon {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box div.jconfirm-title-c {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box div.jconfirm-content {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0 15px;
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box .jconfirm-buttons {
+  text-align: right;
+  padding: 10px;
+  margin: -5px 0 0;
+  border-top: solid 1px #ddd;
+  overflow: hidden;
+  border-radius: 0 0 4px 4px;
+}
+
+.jconfirm.jconfirm-bootstrap .jconfirm-box .jconfirm-buttons button {
+  font-weight: 500;
+}
+
+.jconfirm.jconfirm-bootstrap.jconfirm-rtl .jconfirm-title-c .jconfirm-icon-c {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-bg {
+  background-color: slategray;
+  opacity: 0.6;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box {
+  background-color: white;
+  -webkit-box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14),
+    0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  padding: 30px 30px 15px;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-closeIcon {
+  color: rgba(0, 0, 0, 0.87);
+  top: 15px;
+  right: 15px;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-title-c {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-title-c .jconfirm-icon-c {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  display: block;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-size: 69px;
+  color: #aaa;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-content {
+  text-align: center;
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box .jconfirm-buttons {
+  text-align: center;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box .jconfirm-buttons button {
+  font-weight: bold;
+  text-transform: uppercase;
+  /* -webkit-transition: background 0.1s; */
+  /* transition: background 0.1s; */
+  padding: 10px 20px;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box .jconfirm-buttons button + button {
+  margin-left: 4px;
+}
+
+.jconfirm.jconfirm-modern.jconfirm-open .jconfirm-box .jconfirm-title-c .jconfirm-icon-c {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/*Kanban quick task recurring starty*/
+.quick-recurring {
+  color: #222222;
+  margin: 10px 0;
+}
+
+.quick-recurring .mycard_header h2 {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+  background: #acacac;
+  margin: 0;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.quick-recurring .mycard_body {
+  border: 1px solid #eeeeee;
+  padding: 15px;
+  border-radius: 0 5px 5px 5px;
+  background: #ffffff;
+}
+
+.quick-recurring .form-label {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.quick-recurring .pattern-wrp .pattern-right .Ptrn-item-cmn input[type="radio"] {
+  width: 12px;
+}
+
+.quick_scheduler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.quick_scheduler:hover {
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-single {
+  padding: 3px 2.25rem 3px 0.75rem;
+  background: #ffffff;
+  font-size: 1rem;
+  height: auto;
+  border: 1px solid #ced4da;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-single div {
+  width: 40px;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-single div b {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop {
+  -webkit-transform: scale(0.8) translate(20px, 0);
+  transform: scale(0.8) translate(20px, 0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  border: 0;
+  top: 110%;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-search {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-search input {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1px solid #ced4da;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 95% center;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-results {
+  margin: 0;
+  padding: 0;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-results li {
+  padding: 5px 10px;
+}
+
+.add_task_dropdown .chosen-container-single.chosen-with-drop .chosen-drop {
+  -webkit-transform: scale(1) translate(0, 0);
+  transform: scale(1) translate(0, 0);
+  opacity: 1;
+}
+
+.add_task_dropdown .chosen-container-single.chosen-container-active .chosen-single {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  border-radius: 5px;
+}
+
+.add_task_dropdown .chosen-container-single.chosen-container-active .chosen-single div b {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+/*Kanban quick task recurring ends*/
+/*Kanban quick task user list starts*/
+.add_task_dropdown .users_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0px;
+}
+
+.add_task_dropdown .users_list li .adduser-btn {
+  background: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+  border: 1px solid #e4e2da;
+  padding: 2px;
+}
+
+.add_task_dropdown .users_list li .adduser-btn:after {
+  display: none;
+}
+
+.add_task_dropdown .users_list li .adduser-btn svg {
+  margin-right: 0;
+}
+
+.add_task_dropdown .custom_dropdown.open ul {
+  min-width: 200px;
+  width: 200px;
+}
+
+.add_task_dropdown .chosen-container {
+  font-size: 12px;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list {
+  /*  border-right: 1px solid rgba(112,112,112,0.4);*/
+  padding: 0 5px;
+  position: relative;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list li {
+  line-height: 1;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list li img {
+  margin-right: 0;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list:after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 1px;
+  background-color: rgba(112, 112, 112, 0.4);
+  right: 0;
+  top: 2px;
+}
+
+.add_task_dropdown .quick_reviewer_dropdown .users_list {
+  padding-left: 5px;
+}
+
+/*Kanban quick task user list ends*/
+/*Kanban quick task dropdown height starts*/
+.newtask_row.open .add_task_dropdown.changeHeight {
+  max-height: 240px;
+  height: 240px;
+}
+
+.newtask_row.open .add_task_dropdown.changeHeight .chosen-drop {
+  max-height: 200px;
+}
+
+.newtask_row.open .add_task_dropdown.changeHeight .chosen-drop .chosen-results {
+  max-height: 140px;
+}
+
+/*Kanban quick task dropdown height ends*/
+.quick_task_features .chosen-container-single .chosen-single {
+  font-size: 0.85rem;
+}
+
+.quick_task_features .custom_dropdown button {
+  font-size: 0.85rem;
+}
+
+.quick_task_features .custom_dropdown button label {
+  margin-bottom: 0;
+}
+
+.quick_task_features .custom_dropdown ul#ddlPriority_TODO {
+  width: 100%;
+  min-width: 100%;
+}
+
+/* css for scheduler */
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-left button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25px 100px;
+  grid-template-columns: 25px 100px;
+  margin: 0 0 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*Kanban quick task recurring starty*/
+.quick-recurring {
+  color: #222222;
+  margin: 10px 0;
+}
+
+.quick-recurring .mycard_header h2 {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+  background: #acacac;
+  margin: 0;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.quick-recurring .mycard_body {
+  border: 1px solid #eeeeee;
+  padding: 5px;
+  border-radius: 0 5px 5px 5px;
+  background: #ffffff;
+}
+
+.quick-recurring .form-label {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.quick-recurring .pattern-wrp .pattern-right .Ptrn-item-cmn input[type="radio"] {
+  width: 12px;
+}
+
+.quick_scheduler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.quick_scheduler:hover {
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-single {
+  padding: 3px 2.25rem 3px 0.75rem;
+  background: #ffffff;
+  font-size: 1rem;
+  height: auto;
+  border: 1px solid #ced4da;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-single div {
+  width: 40px;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-single div b {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop {
+  -webkit-transform: scale(0.8) translate(20px, 0);
+  transform: scale(0.8) translate(20px, 0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  border: 0;
+  top: 110%;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-search {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-search input {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1px solid #ced4da;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 95% center;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-results {
+  margin: 0;
+  padding: 0;
+}
+
+.add_task_dropdown .chosen-container-single .chosen-drop .chosen-results li {
+  padding: 5px 10px;
+}
+
+.add_task_dropdown .chosen-container-single.chosen-with-drop .chosen-drop {
+  -webkit-transform: scale(1) translate(0, 0);
+  transform: scale(1) translate(0, 0);
+  opacity: 1;
+}
+
+.add_task_dropdown .chosen-container-single.chosen-container-active .chosen-single {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  border-radius: 5px;
+}
+
+.add_task_dropdown .chosen-container-single.chosen-container-active .chosen-single div b {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+/*Kanban quick task recurring ends*/
+/*Kanban quick task user list starts*/
+.add_task_dropdown .users_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0px;
+}
+
+.add_task_dropdown .users_list li .adduser-btn {
+  background: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+  border: 1px solid #e4e2da;
+  padding: 2px;
+}
+
+.add_task_dropdown .users_list li .adduser-btn:after {
+  display: none;
+}
+
+.add_task_dropdown .users_list li .adduser-btn svg {
+  margin-right: 0;
+}
+
+.add_task_dropdown .custom_dropdown.open ul {
+  min-width: 200px;
+  width: 200px;
+}
+
+.add_task_dropdown .chosen-container {
+  font-size: 12px;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list {
+  /*  border-right: 1px solid rgba(112,112,112,0.4);*/
+  padding: 0 5px;
+  position: relative;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list li {
+  line-height: 1;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list li img {
+  margin-right: 0;
+}
+
+.add_task_dropdown .quick_preparor_dropdown .users_list:after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 1px;
+  background-color: rgba(112, 112, 112, 0.4);
+  right: 0;
+  top: 2px;
+}
+
+.add_task_dropdown .quick_reviewer_dropdown .users_list {
+  padding-left: 5px;
+}
+
+/*Kanban quick task user list ends*/
+/*Kanban quick task dropdown height starts*/
+.newtask_row.open .add_task_dropdown.changeHeight {
+  max-height: 240px;
+  height: 240px;
+}
+
+.newtask_row.open .add_task_dropdown.changeHeight .chosen-drop {
+  max-height: 200px;
+}
+
+.newtask_row.open .add_task_dropdown.changeHeight .chosen-drop .chosen-results {
+  max-height: 140px;
+}
+
+/*Kanban quick task dropdown height ends*/
+.quick_task_features .chosen-container-single .chosen-single {
+  font-size: 0.85rem;
+}
+
+.quick_task_features .custom_dropdown button {
+  font-size: 0.85rem;
+}
+
+.quick_task_features .custom_dropdown button label {
+  margin-bottom: 0;
+}
+
+.quick_task_features .custom_dropdown ul#ddlPriority_TODO {
+  width: 100%;
+  min-width: 100%;
+}
+
+/* css for scheduler */
+#Make-Recurring .recurring_form .pattern-wrp {
+  -ms-grid-columns: 140px 1fr !important;
+  grid-template-columns: 140px 1fr !important;
+  grid-gap: 0 0.8rem;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-left button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25px 100px;
+  grid-template-columns: 25px 100px;
+  margin: 0 0 0px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-left button .radio {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  border: 1px solid #a7a7a7;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-left button span {
+  font-size: 0.85rem !important;
+  word-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  margin: 0;
+  color: #222222;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-right {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-right .Ptrn-item-cmn input {
+  font-size: 0.85rem;
+  padding: 0.275rem 0.65rem;
+  height: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .every-wrp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75px 1fr;
+  grid-template-columns: 75px 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.c_radio {
+  position: relative;
+  padding-left: 25px;
+}
+
+.c_radio input[type="radio"] {
+  display: none;
+}
+
+.c_radio.mb-2 {
+  margin-bottom: 10px;
+}
+
+.c_radio .enddate {
+  width: 160px;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+  padding: 5px 15px;
+  height: auto;
+  line-height: 22px !important;
+}
+
+.c_radio .endafter {
+  width: 45px !important;
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: middle;
+  padding: 2px 2px;
+  height: auto;
+  line-height: 12px !important;
+}
+
+.c_radio label {
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.c_radio label:hover::before {
+  border: 1px solid #f79a26;
+}
+
+.c_radio label::before {
+  width: 18px;
+  height: 18px;
+  content: "";
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e4e2da;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.range-item-cmn input,
+.endson input {
+  max-width: calc(100% - 110px) !important;
+  width: calc(100% - 110px) !important;
+}
+
+.mb-1 {
+  margin-bottom: 10px !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.form-control {
+  font-size: 0.85rem;
+  padding: 0.275rem 0.65rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+#SstartDate,
+#S_EndDate {
+  height: 20px;
+  padding: 2px 2px;
+  font-size: 12px;
+  display: inline-block;
+  min-height: 20px;
+}
+
+.custom_dropdown ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.custom_dropdown ul li {
+  padding: 5px 10px;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px auto;
+  grid-template-columns: 30px auto;
+  grid-gap: 5px;
+}
+
+.custom_dropdown ul li .user_initals {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff5555;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.custom_dropdown ul li .user_initals img.user-name-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.custom_dropdown ul .search {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.custom_dropdown ul .search svg {
+  position: absolute;
+  left: 5px;
+  top: 9px;
+}
+
+.custom_dropdown ul .search input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  padding: 7px 40px 7px 25px;
+  height: auto;
+  line-height: 20px;
+}
+
+.user_list_wrapper {
+  position: relative;
+}
+
+.user_list_dropdown {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user_list_dropdown.open {
+  opacity: 1;
+  overflow-y: auto;
+  max-height: 200px;
+  min-width: 200px;
+}
+
+.user_list_dropdown .search {
+  position: relative;
+  padding: 0;
+}
+
+.user_list_dropdown .search svg {
+  position: absolute;
+  left: 5px;
+  top: 9px;
+}
+
+.user_list_dropdown .search input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  padding: 7px 40px 7px 25px;
+  height: auto;
+  line-height: 20px;
+}
+
+.compliance_user_list li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px auto;
+  grid-template-columns: 30px auto;
+  grid-gap: 5px;
+  padding: 5px 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.compliance_user_list li .user_initals {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff5555;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.compliance_user_list li .user_initals img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.compliance_user_list li:hover {
+  background: #eeeeee;
+}
+
+.compliance_user_list li .user_name {
+  padding-bottom: 2px;
+}
+
+.user-name-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
+
+.main_outlook_wrapper .emailInput input,
+.main_outlook_wrapper .passwordInput input {
+  width: 230px;
+  border-radius: 5px;
+  margin: 0 auto 10px;
+  padding: 0.3rem 1rem;
+
+  border: 1px solid #999;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}

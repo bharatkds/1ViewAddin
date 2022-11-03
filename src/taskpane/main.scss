@@ -1,0 +1,931 @@
+/*Kanban quick task recurring starty*/
+.quick-recurring {
+  color: #222222;
+  margin: 10px 0;
+
+  .mycard_header h2 {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    background: #acacac;
+    margin: 0;
+    color: #ffffff;
+    display: inline-block;
+  }
+
+  .mycard_body {
+    border: 1px solid #eeeeee;
+    padding: 15px;
+    border-radius: 0 5px 5px 5px;
+    background: #ffffff;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+
+  .pattern-wrp .pattern-right .Ptrn-item-cmn input[type="radio"] {
+    width: 12px;
+  }
+}
+.quick_scheduler {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  &:hover {
+    background: #f0f0f0;
+    cursor: pointer;
+  }
+}
+
+.add_task_dropdown {
+  .chosen-container-single {
+    .chosen-single {
+      padding: 3px 2.25rem 3px 0.75rem;
+      background: #ffffff;
+      font-size: 1rem;
+      height: auto;
+      border: 1px solid #ced4da;
+      box-shadow: 0 0 0;
+
+      div {
+        width: 40px;
+
+        b {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+          background-repeat: no-repeat;
+          background-position: right 0.75rem center;
+          background-size: 16px 12px;
+        }
+      }
+    }
+
+    .chosen-drop {
+      transform: scale(0.8) translate(20px, 0);
+      transition: all 0.2s ease;
+      opacity: 0;
+      border: 0;
+      top: 110%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+
+      .chosen-search {
+        padding: 6px 10px;
+        border-bottom: 1px solid #eeeeee;
+
+        input {
+          padding: 6px 10px;
+          border-radius: 3px;
+          border: 1px solid #ced4da;
+          background: transparent
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+            no-repeat 95% center;
+        }
+      }
+
+      .chosen-results {
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    &.chosen-with-drop {
+      .chosen-drop {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+      }
+    }
+
+    &.chosen-container-active {
+      .chosen-single {
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        box-shadow: 0 0 0;
+        border-radius: 5px;
+
+        div {
+          b {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+/*Kanban quick task recurring ends*/
+
+/*Kanban quick task user list starts*/
+
+.add_task_dropdown {
+  .users_list {
+    display: flex;
+    padding-left: 0px;
+
+    li {
+      .adduser-btn {
+        background: red;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #eeeeee 0% 0% no-repeat padding-box;
+        border: 1px solid #e4e2da;
+        padding: 2px;
+
+        &:after {
+          display: none;
+        }
+
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .custom_dropdown {
+    &.open ul {
+      min-width: 200px;
+      width: 200px;
+    }
+  }
+
+  .chosen-container {
+    font-size: 12px;
+  }
+  .quick_preparor_dropdown {
+    .users_list {
+      /*  border-right: 1px solid rgba(112,112,112,0.4);*/
+      padding: 0 5px;
+      position: relative;
+
+      li {
+        line-height: 1;
+
+        img {
+          margin-right: 0;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 25px;
+        width: 1px;
+        background-color: rgba(112, 112, 112, 0.4);
+        right: 0;
+        top: 2px;
+      }
+    }
+  }
+
+  .quick_reviewer_dropdown {
+    .users_list {
+      padding-left: 5px;
+    }
+  }
+}
+/*Kanban quick task user list ends*/
+
+/*Kanban quick task dropdown height starts*/
+.newtask_row.open .add_task_dropdown.changeHeight {
+  max-height: 240px;
+  height: 240px;
+
+  .chosen-drop {
+    max-height: 200px;
+
+    .chosen-results {
+      max-height: 140px;
+    }
+  }
+}
+
+/*Kanban quick task dropdown height ends*/
+
+.quick_task_features {
+  .chosen-container-single .chosen-single {
+    font-size: 0.85rem;
+  }
+
+  .custom_dropdown {
+    button {
+      font-size: 0.85rem;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    ul#ddlPriority_TODO {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+/* css for scheduler */
+.ml-auto {
+  margin-left: auto !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.d-flex {
+  display: flex !important;
+}
+
+#Make-Recurring .recurring_form .pattern-wrp .pattern-left button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25px 100px;
+  grid-template-columns: 25px 100px;
+  margin: 0 0 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*Kanban quick task recurring starty*/
+.quick-recurring {
+  color: #222222;
+  margin: 10px 0;
+
+  .mycard_header h2 {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    background: #acacac;
+    margin: 0;
+    color: #ffffff;
+    display: inline-block;
+  }
+
+  .mycard_body {
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    border-radius: 0 5px 5px 5px;
+    background: #ffffff;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+
+  .pattern-wrp .pattern-right .Ptrn-item-cmn input[type="radio"] {
+    width: 12px;
+  }
+}
+.quick_scheduler {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  &:hover {
+    background: #f0f0f0;
+    cursor: pointer;
+  }
+}
+
+.add_task_dropdown {
+  .chosen-container-single {
+    .chosen-single {
+      padding: 3px 2.25rem 3px 0.75rem;
+      background: #ffffff;
+      font-size: 1rem;
+      height: auto;
+      border: 1px solid #ced4da;
+      box-shadow: 0 0 0;
+
+      div {
+        width: 40px;
+
+        b {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+          background-repeat: no-repeat;
+          background-position: right 0.75rem center;
+          background-size: 16px 12px;
+        }
+      }
+    }
+
+    .chosen-drop {
+      transform: scale(0.8) translate(20px, 0);
+      transition: all 0.2s ease;
+      opacity: 0;
+      border: 0;
+      top: 110%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+
+      .chosen-search {
+        padding: 6px 10px;
+        border-bottom: 1px solid #eeeeee;
+
+        input {
+          padding: 6px 10px;
+          border-radius: 3px;
+          border: 1px solid #ced4da;
+          background: transparent
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+            no-repeat 95% center;
+        }
+      }
+
+      .chosen-results {
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    &.chosen-with-drop {
+      .chosen-drop {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+      }
+    }
+
+    &.chosen-container-active {
+      .chosen-single {
+        background: #ffffff;
+        border: 1px solid #ced4da;
+        box-shadow: 0 0 0;
+        border-radius: 5px;
+
+        div {
+          b {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+/*Kanban quick task recurring ends*/
+
+/*Kanban quick task user list starts*/
+
+.add_task_dropdown {
+  .users_list {
+    display: flex;
+    padding-left: 0px;
+
+    li {
+      .adduser-btn {
+        background: red;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #eeeeee 0% 0% no-repeat padding-box;
+        border: 1px solid #e4e2da;
+        padding: 2px;
+
+        &:after {
+          display: none;
+        }
+
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .custom_dropdown.open ul {
+    min-width: 200px;
+    width: 200px;
+  }
+
+  .chosen-container {
+    font-size: 12px;
+  }
+  .quick_preparor_dropdown {
+    .users_list {
+      /*  border-right: 1px solid rgba(112,112,112,0.4);*/
+      padding: 0 5px;
+      position: relative;
+
+      li {
+        line-height: 1;
+
+        img {
+          margin-right: 0;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 25px;
+        width: 1px;
+        background-color: rgba(112, 112, 112, 0.4);
+        right: 0;
+        top: 2px;
+      }
+    }
+  }
+
+  .quick_reviewer_dropdown {
+    .users_list {
+      padding-left: 5px;
+    }
+  }
+}
+/*Kanban quick task user list ends*/
+
+/*Kanban quick task dropdown height starts*/
+.newtask_row.open .add_task_dropdown.changeHeight {
+  max-height: 240px;
+  height: 240px;
+
+  .chosen-drop {
+    max-height: 200px;
+
+    .chosen-results {
+      max-height: 140px;
+    }
+  }
+}
+
+/*Kanban quick task dropdown height ends*/
+
+.quick_task_features {
+  .chosen-container-single .chosen-single {
+    font-size: 0.85rem;
+  }
+
+  .custom_dropdown {
+    button {
+      font-size: 0.85rem;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    ul#ddlPriority_TODO {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+/* css for scheduler */
+#Make-Recurring {
+  .recurring_form .pattern-wrp {
+    // display: grid;
+    grid-template-columns: 140px 1fr !important;
+    grid-gap: 0 0.8rem;
+    .pattern-left {
+      button {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        width: 100%;
+        text-align: left;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 25px 100px;
+        grid-template-columns: 25px 100px;
+        margin: 0 0 0px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 5px 10px;
+        .radio {
+          width: 10px !important;
+          height: 10px !important;
+          border-radius: 50%;
+          border: 1px solid #a7a7a7;
+          display: inline-block;
+          position: relative;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+        span {
+          font-size: 0.85rem !important;
+          word-spacing: 0.5px;
+          letter-spacing: 0.5px;
+          line-height: 1.5;
+          margin: 0;
+          color: #222222;
+        }
+      }
+    }
+    .pattern-right {
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+
+      .Ptrn-item-cmn input {
+        font-size: 0.85rem;
+        padding: 0.275rem 0.65rem;
+        height: 14px;
+        border: 1px solid #ced4da;
+        border-radius: 3px;
+      }
+    }
+
+    .every-wrp {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 75px 1fr;
+      grid-template-columns: 75px 1fr;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+.c_radio {
+  position: relative;
+  padding-left: 25px;
+  input[type="radio"] {
+    display: none;
+  }
+  &.mb-2 {
+    margin-bottom: 10px;
+  }
+  .enddate {
+    width: 160px;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    padding: 5px 15px;
+    height: auto;
+    line-height: 22px !important;
+  }
+  .endafter {
+    width: 45px !important;
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+    padding: 2px 2px;
+    height: auto;
+    line-height: 12px !important;
+  }
+  label {
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin: 0;
+    &:hover {
+      &::before {
+        border: 1px solid #f79a26;
+      }
+    }
+    &::before {
+      width: 18px;
+      height: 18px;
+      content: "";
+      display: block;
+      background: #ffffff;
+      border: 1px solid #e4e2da;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 50px;
+      transition: all 0.3s ease-in-out;
+      transform: translate(0, -50%);
+    }
+  }
+}
+.range-item-cmn,
+.endson {
+  input {
+    max-width: calc(100% - 110px) !important;
+    width: calc(100% - 110px) !important;
+  }
+}
+
+// bootsrap css starts from here
+// .row {
+//   --bs-gutter-x: 1.5rem;
+//   --bs-gutter-y: 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: calc(var(--bs-gutter-y) * -1);
+//   margin-right: calc(var(--bs-gutter-x) * -0.5);
+//   margin-left: calc(var(--bs-gutter-x) * -0.5);
+// }
+.mb-1 {
+  margin-bottom: 10px !important;
+}
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+// .col-sm-4 {
+//   flex: 0 0 auto;
+//   width: 33.33333333%;
+// }
+// .col-sm-8 {
+//   flex: 0 0 auto;
+//   width: 66.66666667%;
+// }
+.form-control {
+  font-size: 0.85rem;
+  padding: 0.275rem 0.65rem;
+  //   height: 32px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  //   line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+// bootsrap css
+#SstartDate,
+#S_EndDate {
+  height: 20px;
+  padding: 2px 2px;
+  font-size: 12px;
+  display: inline-block;
+  min-height: 20px;
+}
+.custom_dropdown ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  li {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 30px auto;
+    grid-gap: 5px;
+    .user_initals {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #ff5555;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 30px;
+      img.user-name-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: auto;
+      }
+    }
+  }
+  .search {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    svg {
+      position: absolute;
+      left: 5px;
+      top: 9px;
+    }
+    input {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid #eeeeee;
+      padding: 7px 40px 7px 25px;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+}
+.user_list_wrapper {
+  position: relative;
+}
+.user_list_dropdown {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  &.open {
+    opacity: 1;
+    overflow-y: auto;
+    max-height: 200px;
+    min-width: 200px;
+  }
+  .search {
+    position: relative;
+    padding: 0;
+    svg {
+      position: absolute;
+      left: 5px;
+      top: 9px;
+    }
+    input {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid #eeeeee;
+      padding: 7px 40px 7px 25px;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+}
+.compliance_user_list {
+  li {
+    display: grid;
+    grid-template-columns: 30px auto;
+    grid-gap: 5px;
+    padding: 5px 10px;
+    align-items: center;
+    .user_initals {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #ff5555;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 30px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: auto;
+      }
+    }
+
+    &:hover {
+      background: #eeeeee;
+    }
+    .user_name {
+      padding-bottom: 2px;
+    }
+  }
+}
+.user-name-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.custom_dropdown {
+  &.open ul {
+    min-width: 100px;
+    width: 100px;
+    max-height: auto;
+    opacity: 1;
+    top: 40px;
+    background: #fff;
+    max-height: 120px;
+    li {
+      display: block;
+      &:hover {
+        background: #eeeeee;
+      }
+      i {
+        &::before {
+          display: inline-block;
+          content: "";
+          -webkit-border-radius: 0.375rem;
+          border-radius: 0.375rem;
+          height: 0.6rem;
+          width: 0.6rem;
+          margin-right: 0.5rem;
+          background-color: #bdbdbd;
+        }
+        &.critical {
+          &::before {
+            background-color: #ff4444;
+          }
+        }
+        &.high {
+          &::before {
+            background-color: #f9af1c;
+          }
+        }
+        &.medium {
+          &::before {
+            background-color: #99c45e;
+          }
+        }
+        &.low {
+          &::before {
+            background-color: #17bdff;
+          }
+        }
+      }
+    }
+  }
+  &.priority {
+    margin-right: 15px;
+    background: #fff;
+    position: relative;
+    margin-left: 10px;
+    button {
+      background: #ffffff;
+      border: 1px solid #d5d5d5;
+      color: #222222;
+      height: 38px;
+      width: 100px;
+      max-width: 100px;
+      &::after {
+        content: "\005E";
+        font-family: var(--fa-style-family, "Font Awesome 6 Free");
+        font-weight: var(--fa-style, 900);
+        right: 14px;
+        top: 10px;
+        position: absolute;
+        font-size: 0.85rem;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.date_wrapper {
+  font-size: 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  .icon_wrapper {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e4e2da;
+    margin: 0 10px;
+    padding: 6px 6px;
+    justify-content: center;
+    background: #fff;
+
+    svg {
+      background-color: #fff;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &:hover {
+    background: #f0f0f0;
+  }
+}
