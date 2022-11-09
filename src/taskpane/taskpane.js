@@ -4,40 +4,41 @@ var CryptoJS = require("crypto-js");
 var localStorage = require("localStorage");
 var ApiURl = "https://dev.1viewtask.com/authapi/login/userLogin";
 var rootURLCompliance = "https://dev.1viewtask.com/complianceapi/";
-Office.onReady((info) => {
-  if (info.host === Office.HostType.Outlook) {
-    // for checking response in Login Page
-    $("#lblUSerError").html(JSON.stringify(localStorage));
-    //document.getElementById("sideload-msg").style.display = "none";
-    document.getElementById("app-body").style.display = "flex";
-    document.getElementById("run").onclick = run;
-    document.getElementById("AddTask").onclick = CreateTask;
+$("#lblUSerError").html(JSON.stringify(localStorage));
+//document.getElementById("sideload-msg").style.display = "none";
+document.getElementById("app-body").style.display = "flex";
+document.getElementById("run").onclick = run;
+document.getElementById("AddTask").onclick = CreateTask;
 
-    $("#Login-btn").bind("click", function (event) {
-      event.preventDefault();
-      {
-        try {
-          if ($("#userName").val() === "") {
-            $("#item-Error").html(JSON.stringify("Please enter your email address"));
-          }
-          if ($("#passWord").val() === "") {
-            $("#item-Error").html(JSON.stringify("Please enter your password"));
-          }
-          if ($("#userName").val() === "" && $("#passWord").val() === "") {
-            $("#item-Error").html(JSON.stringify("Please provide the login details"));
-          } else {
-            getUserLogin();
-            GetUserSettings();
-          }
-        } catch (error) {
-          $("#item-Error").html(JSON.stringify("Inside Try Catch"));
-        }
+$("#Login-btn").bind("click", function (event) {
+  event.preventDefault();
+  {
+    try {
+      if ($("#userName").val() === "") {
+        $("#item-Error").html(JSON.stringify("Please enter your email address"));
       }
-    });
-
-    GetUserSettings();
+      if ($("#passWord").val() === "") {
+        $("#item-Error").html(JSON.stringify("Please enter your password"));
+      }
+      if ($("#userName").val() === "" && $("#passWord").val() === "") {
+        $("#item-Error").html(JSON.stringify("Please provide the login details"));
+      } else {
+        getUserLogin();
+        GetUserSettings();
+      }
+    } catch (error) {
+      $("#item-Error").html(JSON.stringify("Inside Try Catch"));
+    }
   }
 });
+
+GetUserSettings();
+
+// document.ready(() => {
+//     if (.host === Office.HostType.Outlook) {
+//       // for checking response in Login Page
+//     }
+// });
 
 export async function run() {
   /**
@@ -48,6 +49,9 @@ export async function run() {
   // Write message property value to the task pane
   document.getElementById("item-subject").innerHTML = "<b>Subject:</b> <br/>" + item.subject;
   window.location.href = "new_task.html";
+
+  Office.context.mailbox.userProfile.emailAddress;
+  $("#userName").val(Office.context.mailbox.userProfile.emailAddress);
 }
 
 export async function CreateTask() {
